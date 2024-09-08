@@ -1,5 +1,5 @@
 <template>
-  <h1>
+  <header>
     Spartan Gaming
-  </h1>
+  </header>
 </template>
