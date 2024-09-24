@@ -5,11 +5,11 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      'body-orange': '#b4966e',
-      'head-foot-orange': '#cdb08a',
-    },
     extend: {
+      colors: {
+        'body-orange': '#b4966e',
+        'head-foot-orange': '#cdb08a',
+      },
       fontFamily: {
         Montserrat: ["Montserrat", "sans-serif"],
       }

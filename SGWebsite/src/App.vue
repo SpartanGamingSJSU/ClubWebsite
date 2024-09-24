@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div id="app" class="flex flex-col w-full h-full gap-32 font-Montserrat bg-body-orange">
+  <div id="app" class="flex flex-col w-full h-full font-Montserrat bg-body-orange">
     <Navbar />
     <router-view />
     <Footerbar />

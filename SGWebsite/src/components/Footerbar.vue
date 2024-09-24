@@ -7,11 +7,13 @@
 </script>
 
 <template>
-  <footer class="bg-head-foot-orange text-white text-center p-4">
-    <p class="text-sm">
-      <a href="#" class="hover:text-blue-400">Community Guidelines</a> |
-        <span>Copyright © Spartan Gaming 2024</span> |
-        <span>Web Design by Howard Wei</span>
-    </p>
+  <footer class="bg-head-foot-orange p-4">
+    <div class="flex justify-center gap-x-10 text-md">
+      <a href="https://tinyurl.com/277hrv5f" class="transition ease-in duration-200 font-medium hover:text-blue-500">
+        Community Guidelines
+      </a> |
+      <p class="font-medium">© Copyright 2024 Spartan Gaming</p> |
+      <p class="font-medium">Web Design by Howard Wei</p>
+    </div>
   </footer>
 </template>
