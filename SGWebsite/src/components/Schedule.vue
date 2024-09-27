@@ -26,7 +26,7 @@
             <div>
               <h3 class="text-xl font-bold text-orange-600">MONDAYS</h3>
               <ul class="text-lg">
-                <li>Roblox @9pm</li>
+                <li>Roblox @8pm</li>
               </ul>
             </div>
             <div>

@@ -10,7 +10,7 @@
   <header class="bg-head-foot-orange p-4 text-white">
     <nav class="flex justify-between items-center">
       <router-link to="/" class="pl-2 transition ease-in duration-200 hover:scale-105">
-        <img :src="'/NavLogo.png'" class="w-24"/>
+        <img :src="'./NavLogo.png'" class="w-24"/>
       </router-link>
       <div class="flex items-center font-semibold lg:gap-20 gap-4 pr-4">
         <router-link to="/about" class="lg:text-4xl transition ease-in duration-200 hover:text-blue-500">

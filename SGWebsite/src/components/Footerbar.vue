@@ -9,7 +9,7 @@
 <template>
   <footer class="bg-head-foot-orange p-4">
     <div class="flex justify-center gap-x-10 text-md">
-      <a href="https://tinyurl.com/277hrv5f" class="transition ease-in duration-200 font-medium hover:text-blue-500">
+      <a href="https://tinyurl.com/277hrv5f" target="_blank" class="transition ease-in duration-200 font-medium hover:text-blue-500">
         Community Guidelines
       </a> |
       <p class="font-medium">© Copyright 2024 Spartan Gaming</p> |

@@ -17,8 +17,8 @@
       </button>
     </div>
 
-    <div class="flex flex-row justify-center items-center text-center gap-x-60 w-[80%] py-40">
-      <div class="flex flex-col justify-center gap-10 px-40">
+    <div class="flex flex-row justify-center items-center gap-x-60 px-40 py-40">
+      <div class="flex flex-col justify-center items-center gap-y-10">
         <h3 class="text-6xl font-semibold">
           Find Your Video Game Haven
         </h3>
@@ -34,16 +34,18 @@
         </div>
       </div>
 
-      <!--<div class="w-[70%]">
-        <img :src="'/gamecollageplaceholder.png'"/>
-      </div>-->
+      <div class="flex justify-center items-center gap-8 pr-20">
+        <img :src="'/icons/lol-logo.png'" width="128"/>
+        <img :src="'/icons/valorant-logo.png'" width="144" />
+        <img :src="''" width="256"/>
+      </div>
     </div>
 
     <div class="flex flex-col justify-center items-center text-center gap-10 w-[50%] py-40">
       <h3 class="text-6xl font-semibold">
         Meet New Friends
       </h3>
-      <p class="text-4xl px-40 font-medium">
+      <p class="text-4xl px-20 font-medium">
         Our incredible community of gamers are always eager to meet and share new experiences together.
       </p>
       <button class="bg-blue-500 hover:bg-blue-700 rounded-lg py-3 px-6 transition ease-in duration-200">
