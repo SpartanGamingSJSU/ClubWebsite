@@ -2,19 +2,20 @@
   import { defineComponent } from 'vue';
   
   export default defineComponent({
-    name: 'Socials',
+    name: 'SocialsComponent',
   });
 </script>
 
 <template>
-  <div id="socials" class="flex flex-col justify-center items-center text-slate-100 px-20">
-    <div class="flex flex-col justify-center items-center w-[35%] py-40 gap-10">
-      <p class="text-8xl text-center text-slate-100 font-bold">
+  <div id="socials">
+    <div class="flex flex-col justify-center items-center">
+      <img :src="'bannerplaceholder.png'" class="object-cover"/>
+      <p class="absolute lg:text-8xl text-4xl text-center font-bold">
         Socials
       </p>
     </div>
 
-    <div class="flex flex-col justify-center items-center text-center text-4xl font-semibold gap-24 py-40">
+    <div class="flex flex-col justify-center items-center text-center lg:text-4xl text-2xl font-semibold gap-24 lg:py-40 py-10 px-10 ">
       <div class="border-2 rounded-full px-6 py-3 transition ease-in duration-200 text-blue-500 border-blue-500 hover:text-white hover:bg-blue-400 hover:border-blue-400">
         <a href="https://discord.gg/fGufmzW" target="_blank"
           class="flex justify-center items-center gap-4">

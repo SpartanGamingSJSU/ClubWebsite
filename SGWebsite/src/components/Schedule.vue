@@ -2,21 +2,21 @@
   import { defineComponent } from 'vue';
 
   export default defineComponent({
-    name: 'Schedule',
+    name: 'ScheduleComponent',
   });
 </script>
 
 <template>
-  <div id="schedule" class="flex flex-col justify-center items-center text-slate-100 px-20">
-    
-    <div class="flex flex-col justify-center items-center w-[35%] py-40 gap-10">
-      <p class="text-8xl text-center text-slate-100 font-bold">
+  <div id="schedule">
+    <div class="flex flex-col justify-center items-center">
+      <img :src="'bannerplaceholder.png'" class="object-cover"/>
+      <p class="absolute lg:text-8xl text-4xl text-center font-bold">
         Schedule
       </p>
     </div>
 
-    <div class="flex items-center justify-center p-40">
-      <div class="flex flex-col justify-center items-center bg-orange-300 p-16 shadow-lg rounded-lg gap-4">
+    <div class="flex items-center justify-center lg:py-40 py-10 px-20">
+      <div class="flex flex-col justify-center items-center bg-orange-300 p-12 shadow-lg rounded-lg gap-4">
         <div class="border-4 border-orange-500 rounded-lg px-16 py-10">
           <h1 class="text-4xl font-bold text-black mb-4">Fall 2024</h1>
           <h2 class="text-3xl font-bold text-black mb-6">InHouse Schedule</h2>
@@ -25,29 +25,29 @@
             <!-- Left Column -->
             <div>
               <h3 class="text-xl font-bold text-orange-600">MONDAYS</h3>
-              <ul class="text-lg">
-                <li>Roblox @8pm</li>
-              </ul>
+              <div class="text-lg font-medium">
+                Roblox @8pm
+              </div>
             </div>
             <div>
               <h3 class="text-xl font-bold text-orange-600">FRIDAYS</h3>
-              <ul class="text-lg">
-                <li>Variety Night @8pm</li>
-              </ul>
+              <div class="text-lg font-medium">
+                Variety Night @8pm
+              </div>
             </div>
 
             <!-- Right Column -->
             <div>
               <h3 class="text-xl font-bold text-orange-600">SATURDAYS</h3>
-              <ul class="text-lg">
-                <li>Valorant @8pm</li>
-              </ul>
+              <div class="text-lg font-medium">
+                Valorant @8pm
+              </div>
             </div>
             <div>
               <h3 class="text-xl font-bold text-orange-600">SUNDAYS</h3>
-              <ul class="text-lg">
-                <li>League of Legends @8pm</li>
-              </ul>
+              <div class="text-lg font-medium">
+                League of Legends @8pm
+              </div>
             </div>
           </div>
 

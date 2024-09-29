@@ -3,7 +3,7 @@
   import StaffMember from './StaffMember.vue';
 
   export default defineComponent({
-    name: 'About',
+    name: 'AboutComponent',
     components: {
       StaffMember,
     },
@@ -11,57 +11,61 @@
 </script>
 
 <template>
-  <div id="about" class="flex flex-col justify-center items-center text-slate-100 px-20">
-    
-    <div class="flex flex-col justify-center items-center w-[35%] py-40 gap-10">
-      <p class="text-8xl text-center text-slate-100 font-bold">
+  <div id="about">
+    <div class="flex flex-col justify-center items-center">
+      <img :src="'bannerplaceholder.png'" class="object-cover"/>
+      <p class="absolute lg:text-8xl text-4xl text-center font-bold">
         About
       </p>
     </div>
+    
 
-    <div class="flex flex-row justify-center items-center text-center w-[60%] py-40">
-      <p class="text-5xl font-medium">
-        Hello! We are Spartan Gaming, the biggest social gaming club at SJSU!
-        Our goal is to bring students together through a shared passion for gaming.
-      </p>
-    </div>
+    <div class="flex flex-col justify-center items-center lg:px-20 px-4 lg:py-40 py-10">
+      <div class="text-center lg:w-[60%] lg:py-20 py-10">
+        <p class="lg:text-4xl text-2xl font-medium">
+          Hello! We are Spartan Gaming, the biggest social gaming club at SJSU!
+          Our goal is to bring students together through a shared passion for gaming.
+        </p>
+      </div>
 
-    <div class="flex flex-col justify-center items-center text-center gap-10 py-40">
-      <h3 class="text-7xl font-semibold">
-        Meet Our Officers
-      </h3>
-      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 p-8">
-        <StaffMember 
-          staffName="Thao"
-          photo="./SGLogo.png"
-          position="President"
-        />
-        <StaffMember 
-          staffName="George"
-          photo="./SGLogo.png"
-          position="Vice President"
-        />
-        <StaffMember 
-          staffName="Suizo"
-          photo="./SGLogo.png"
-          position="Secretary"
-        />
-        <StaffMember 
-          staffName="Michael"
-          photo="./SGLogo.png"
-          position="Treasurer"
-        />
-        <StaffMember 
-          staffName="Brandon"
-          photo="./SGLogo.png"
-          position="Marketing"
-        />
-        <StaffMember 
-          staffName="Pink"
-          photo="./SGLogo.png"
-          position="Marketing"
-        />
+      <div class="flex flex-col justify-center items-center text-center gap-12 pt-20">
+        <h3 class="lg:text-6xl text-3xl font-semibold">
+          Meet Our Officers
+        </h3>
+        <div class="flex flex-wrap justify-center items-center gap-8 lg:px-20">
+          <StaffMember 
+            staffName="Thao"
+            photo="./NavLogo.png"
+            position="President"
+          />
+          <StaffMember 
+            staffName="George"
+            photo="./NavLogo.png"
+            position="Vice President"
+          />
+          <StaffMember 
+            staffName="Suizo"
+            photo="./NavLogo.png"
+            position="Secretary"
+          />
+          <StaffMember 
+            staffName="Michael"
+            photo="./NavLogo.png"
+            position="Treasurer"
+          />
+          <StaffMember 
+            staffName="Brandon"
+            photo="./NavLogo.png"
+            position="Marketing"
+          />
+          <StaffMember 
+            staffName="Pink"
+            photo="./NavLogo.png"
+            position="Marketing"
+          />
+        </div>
       </div>
     </div>
+      
   </div>
 </template>

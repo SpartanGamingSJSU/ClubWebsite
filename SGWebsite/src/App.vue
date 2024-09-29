@@ -1,21 +1,21 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import Navbar from './components/Navbar.vue';
-  import Footerbar from './components/Footerbar.vue';
+  import NavbarComponent from './components/Navbar.vue';
+  import FooterbarComponent from './components/Footerbar.vue';
 
   export default defineComponent({
     name: 'App',
     components: {
-      Navbar,
-      Footerbar,
+      NavbarComponent,
+      FooterbarComponent,
     },
   });
 </script>
 
 <template>
   <div id="app" class="flex flex-col w-full h-full font-Montserrat bg-body-orange">
-    <Navbar />
-    <router-view />
-    <Footerbar />
+    <NavbarComponent />
+    <router-view class="relative lg:py-20 py-16 text-slate-100"/>
+    <FooterbarComponent />
   </div>
 </template>
