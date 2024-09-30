@@ -35,32 +35,32 @@
         <div class="flex flex-wrap justify-center items-center gap-8 lg:px-20">
           <StaffMember 
             staffName="Thao"
-            photo="./NavLogo.png"
+            photo="./Officers/DefaultOfficer.png"
             position="President"
           />
           <StaffMember 
             staffName="George"
-            photo="./NavLogo.png"
+            photo="./Officers/DefaultOfficer.png"
             position="Vice President"
           />
           <StaffMember 
             staffName="Suizo"
-            photo="./NavLogo.png"
+            photo="./Officers/DefaultOfficer.png"
             position="Secretary"
           />
           <StaffMember 
             staffName="Michael"
-            photo="./NavLogo.png"
+            photo="./Officers/DefaultOfficer.png"
             position="Treasurer"
           />
           <StaffMember 
             staffName="Brandon"
-            photo="./NavLogo.png"
+            photo="./Officers/DefaultOfficer.png"
             position="Marketing"
           />
           <StaffMember 
             staffName="Pink"
-            photo="./NavLogo.png"
+            photo="./Officers/DefaultOfficer.png"
             position="Marketing"
           />
         </div>
