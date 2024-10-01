@@ -50,7 +50,7 @@
     <div class="relative flex flex-col justify-center items-center">
       <!-- Carousel Images with Transition -->
       <transition name="fade" mode="out-in">
-        <img :src="images[currentIndex]" class="object-contain w-full max-h-[600px]" v-if="fadeTransition" key="currentIndex"/>
+        <img :src="images[currentIndex]" class="object-contain w-full max-h-[600px]" :key="currentIndex"/>
       </transition>
 
       <!-- Text and Button Overlay -->
@@ -121,11 +121,10 @@
 </template>
 
 <style scoped>
-/* Add CSS for fade transitions */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s ease-in-out;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s ease;
+  }
+  .fade-enter-from, .fade-leave-to {
+    opacity: 0;
+  }
 </style>
