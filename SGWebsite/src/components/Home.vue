@@ -5,9 +5,22 @@
     setup() {
       // Carousel images
       const images = ref([
-        './bannerplaceholder.png',
-        './bannerplaceholder.png',
-        './bannerplaceholder.png'
+        './BannerPictures/BannerPicture1.png',
+        './BannerPictures/BannerPicture2.png',
+        './BannerPictures/BannerPicture3.png',
+        './BannerPictures/BannerPicture4.png',
+        './BannerPictures/BannerPicture5.png',
+        './BannerPictures/BannerPicture6.png',
+        './BannerPictures/BannerPicture7.png',
+        './BannerPictures/BannerPicture8.png',
+        './BannerPictures/BannerPicture9.png',
+        './BannerPictures/BannerPicture10.png',
+        './BannerPictures/BannerPicture11.png',
+        './BannerPictures/BannerPicture12.png',
+        './BannerPictures/BannerPicture13.png',
+        './BannerPictures/BannerPicture14.png',
+        './BannerPictures/BannerPicture15.png',
+        './BannerPictures/BannerPicture16.png',
       ]);
 
       const currentIndex = ref(0);
@@ -19,12 +32,12 @@
         setTimeout(() => {
           currentIndex.value = (currentIndex.value + 1) % images.value.length;
           fadeTransition.value = true; // Trigger the fade-in effect after the image has been changed
-        }, 1000); // Time matches the fade-out duration
+        }, 800); // Time matches the fade-out duration
       };
 
       // Auto-slide every 6 seconds
       onMounted(() => {
-        intervalId = window.setInterval(nextSlide, 6000); // Change every 6 seconds
+        intervalId = window.setInterval(nextSlide, 7000); // Change every 6 seconds
       });
 
       // Clear the interval when component unmounts
@@ -50,18 +63,18 @@
     <div class="relative flex flex-col justify-center items-center">
       <!-- Carousel Images with Transition -->
       <transition name="fade" mode="out-in">
-        <img :src="images[currentIndex]" class="object-contain w-full max-h-[600px]" :key="currentIndex"/>
+        <img :src="images[currentIndex]" class="object-contain w-full h-full opacity-80" :key="currentIndex"/>
       </transition>
 
       <!-- Text and Button Overlay -->
       <div class="absolute flex flex-col justify-center items-center lg:w-[60%] w-[90%] lg:py-30 py-10 lg:gap-8 gap-2">
-        <p class="lg:text-4xl text-sm text-center font-semibold">
+        <p class="lg:text-4xl text-lg text-center font-semibold">
           Queue up with your fellow Spartans in your favorite games. Online or in-person.
         </p>
-        <button class="bg-blue-500 hover:bg-blue-700 rounded-lg font-medium lg:py-3 lg:px-6 sm:py-2 sm:px-4 py-0.5 px-2 transition ease-in duration-200">
+        <button class="bg-blue-500 hover:bg-blue-700 rounded-lg font-medium lg:py-3 lg:px-6 py-2 px-4 transition ease-in duration-200">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSd08Gs1S8frwhcFCj0_DjjYtiZme6kCZ3omDIShwoL92vaikA/viewform"
             target="_blank"
-            class="lg:text-2xl sm:text-base text-xs font-medium">
+            class="lg:text-2xl font-medium">
             Become a Member
           </a>
         </button>
@@ -122,7 +135,7 @@
 
 <style scoped>
   .fade-enter-active, .fade-leave-active {
-    transition: opacity 1s ease;
+    transition: opacity 0.7s ease-in;
   }
   .fade-enter-from, .fade-leave-to {
     opacity: 0;
