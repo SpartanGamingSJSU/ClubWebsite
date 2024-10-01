@@ -9,7 +9,7 @@
 <template>
   <div id="socials">
     <div class="flex flex-col justify-center items-center">
-      <img :src="'/BannerPictures/PagesBanner.png'" class="object-fill w-full max-h-[865px] opacity-90"/>
+      <img :src="'/BannerPictures/PagesBanner.svg'" class="object-fill w-full h-full opacity-90"/>
       <p class="absolute lg:text-8xl text-4xl text-center font-bold">
         Socials
       </p>
