@@ -32,35 +32,30 @@
         <h3 class="lg:text-6xl text-3xl font-semibold">
           Meet Our Officers
         </h3>
-        <div class="flex flex-wrap justify-center items-center gap-8 lg:px-20">
+        <div class="flex flex-wrap justify-center items-center gap-8 lg:px-48 px-10">
           <StaffMember 
             staffName="Thao"
-            photo="./Officers/DefaultOfficer.png"
+            photo="./Officers/PresidentOfficer.png"
             position="President"
           />
           <StaffMember 
             staffName="George"
-            photo="./Officers/DefaultOfficer.png"
+            photo="./Officers/VicePresidentOfficer.png"
             position="Vice President"
           />
           <StaffMember 
             staffName="Suizo"
-            photo="./Officers/DefaultOfficer.png"
+            photo="./Officers/SecretaryOfficer.png"
             position="Secretary"
           />
           <StaffMember 
             staffName="Michael"
-            photo="./Officers/DefaultOfficer.png"
+            photo="./Officers/TreasurerOfficer.png"
             position="Treasurer"
           />
           <StaffMember 
-            staffName="Brandon"
-            photo="./Officers/DefaultOfficer.png"
-            position="Marketing"
-          />
-          <StaffMember 
             staffName="Pink"
-            photo="./Officers/DefaultOfficer.png"
+            photo="./Officers/MarketingOfficer.png"
             position="Marketing"
           />
         </div>
