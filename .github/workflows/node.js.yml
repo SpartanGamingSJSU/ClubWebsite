@@ -25,24 +25,24 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: portfolio/package-lock.json # Ensure the path matches your project structure
+        cache-dependency-path: SGWebsite/package-lock.json # Ensure the path matches your project structure
 
     # Step 3: Install dependencies
     - name: Install dependencies
       run: |
-        cd portfolio
+        cd SGWebsite
         npm install
 
     # Step 4: Build the project using Vite
     - name: Build the project
       run: |
-        cd portfolio
+        cd SGWebsite
         npm run build-only
 
     # Step 5: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       run: |
-        cd portfolio
+        cd SGWebsite
         git remote set-url origin https://git:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         npm run deploy
       env:
