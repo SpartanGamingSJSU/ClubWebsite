@@ -90,12 +90,10 @@
   <div id="home">
     <!-- Carousel Section -->
     <div class="relative flex flex-col justify-center items-center">
-      <!-- Carousel Images with Transition -->
       <transition name="slideDirection" mode="out-in">
         <img :src="images[currentIndex]" class="object-contain w-full h-full opacity-80" :key="currentIndex"/>
       </transition>
 
-      <!-- Text and Button Overlay -->
       <div class="absolute flex flex-col justify-center items-center lg:w-[60%] w-[90%] lg:py-30 py-10 lg:gap-8 gap-2">
         <p class="lg:text-4xl text-lg text-center font-semibold">
           Queue up with your fellow Spartans in your favorite games. Online or in-person.
