@@ -22,14 +22,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: sgwebsite/package-lock.json
+    - run: cd sgwebsite && npm install
+    - run: cd sgwebsite && npm run build
 
-    - run: cd sgwebsite && npm ci
-    - run: cd sgwebsite && npm run build-only --if-present
     - name: Deploy with gh-pages
       run: |
-        cd sgwebsite
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
-        npm run deploy -- -d dist
+        cd sgwebsite && git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
