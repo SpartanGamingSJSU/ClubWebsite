@@ -1,6 +1,6 @@
 import './assets/main.css'
+import routes from '~/pages';
 
-import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -8,6 +8,7 @@ import Home from './components/Home.vue';
 import About from './components/About.vue';
 import Schedule from './components/Schedule.vue';
 import Socials from './components/Socials.vue';
+import { ViteSSG } from 'vite-ssg'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -19,4 +20,14 @@ const router = createRouter({
   ]
 });
 
-createApp(App).use(router).mount('#app')
+
+export const createApp = ViteSSG(
+  // the root component
+  App,
+  // vue-router options
+  { routes },
+  // function to have custom setups
+  ({ app, router, routes, isClient, initialState }) => {
+    // install plugins etc.
+  },
+)
