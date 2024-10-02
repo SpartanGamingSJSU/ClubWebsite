@@ -22,13 +22,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: SGWebsite/package-lock.json
-    - run: cd SGWebsite && npm install
-    - run: cd SGWebsite && npm run build --if-present
+        cache-dependency-path: portfolio/package-lock.json
+    - run: cd portfolio && npm install
+    - run: cd portfolio && npm run build --if-present
 
     - name: Deploy with gh-pages
       run: |
-        cd SGWebsite && git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        cd portfolio && git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
