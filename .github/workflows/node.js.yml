@@ -16,20 +16,34 @@ jobs:
         node-version: [22.x]
 
     steps:
+    # Step 1: Checkout the code from the repo
     - uses: actions/checkout@v4
+
+    # Step 2: Setup Node.js using the specified version
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: SGWebsite/package-lock.json # Ensure the path matches your project structure
 
-    - run: cd sgwebsite && npm ci
-    - run: cd sgwebsite && npm run build-only --if-present
-    - name: Deploy with gh-pages
+    # Step 3: Install dependencies
+    - name: Install dependencies
       run: |
-        cd sgwebsite
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
-        npm run deploy -- -d dist
+        cd SGWebsite
+        npm install
+
+    # Step 4: Build the project using Vite
+    - name: Build the project
+      run: |
+        cd SGWebsite
+        npm run build-only
+
+    # Step 5: Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      run: |
+        cd SGWebsite
+        git remote set-url origin https://git:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        npm run deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
